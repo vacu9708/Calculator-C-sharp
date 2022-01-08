@@ -340,6 +340,7 @@ namespace WindowsFormsApp1
                 calculate(0, numbers.Count - 1); // Final calculation after the calculations of higher priority
                 textBox2.Text = Convert.ToString(numbers[0]); // Print result
 
+                // Clear
                 textBox1.Text = "";
                 index = 0;
                 numbers.Clear();
@@ -348,6 +349,7 @@ namespace WindowsFormsApp1
                 numbers.Add("");
                 operation_symbol_possible = false;
                 opening_parenthesis = true;
+                //-----
             }
             catch
             {
