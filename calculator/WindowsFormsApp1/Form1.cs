@@ -333,6 +333,7 @@ namespace WindowsFormsApp1
                 calculate(0, index); //Final calculation after the calculations of higher priority
                 textBox2.Text = Convert.ToString(num[0]); // Print result
 
+                // Clear
                 textBox1.Text = "";
                 index = 0;
                 num.Clear();
