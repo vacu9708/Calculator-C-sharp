@@ -319,13 +319,6 @@ namespace WindowsFormsApp1
 
         private void button19_Click(object sender, EventArgs e) // =
         {
-            List<string> temp_numbers = new List<string>();
-            List<char> temp_symbols = new List<char>();
-            for(int i = 0; i < numbers.Count(); i++)
-                temp_numbers.Add(numbers[i]);
-            for (int i = 0; i < symbols.Count(); i++)
-                temp_symbols.Add(symbols[i]);
-
             try
             {
                 for (int i = 0; i < parenthesis_indexes.Count - 1; i += 2) // Calculate the inside of parentheses first
@@ -334,15 +327,15 @@ namespace WindowsFormsApp1
                 calculate(0, numbers.Count - 1); // Final calculation after the calculations of higher priority
                 textBox2.Text = Convert.ToString(numbers[0]); // Print result
 
-                // Recover previous calculation
-                numbers[0] = temp_numbers[0];
-                for (int i = 1; i < temp_numbers.Count; i++)
-                    numbers.Add(temp_numbers[i]);
-                for (int i = 0; i < temp_symbols.Count(); i++)
-                    symbols.Add(temp_symbols[i]);
-                for (int j = 0; j < parenthesis_indexes.Count; j++)
-                    parenthesis_indexes[j] += recovering_previous_parenthesis_indexes;
-                recovering_previous_parenthesis_indexes = 0;
+                // Clear
+                textBox1.Text = "";
+                index = 0;
+                numbers.Clear();
+                symbols.Clear();
+                parenthesis_indexes.Clear();
+                numbers.Add("");
+                operation_symbol_possible = false;
+                opening_parenthesis = true;
                 //-----
             }
             catch
