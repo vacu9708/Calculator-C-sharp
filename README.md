@@ -1,6 +1,5 @@
 # Calculator with C#
-I tried making a calculator with C# to learn basic things of C#.
-There were more things to consider to make a calculator and it was harder than I thought. I realized it is not that simple to make a calculator.
+I tried making a calculator with C# to learn basic things of C#. At first I thought making a calculator would be simple but I realized there are many things to consider to make a calculator and it was harder than I thought.
 
 # Functions
 * C : clear
